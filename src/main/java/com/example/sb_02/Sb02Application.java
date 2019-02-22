@@ -16,6 +16,7 @@ public class Sb02Application {
 
     @RequestMapping("/")
     public String getEnv() {
-        return System.getenv("EXAM");
+        String res = System.getenv("EXAM");
+        return res != null ? res : "wow";
     }
 }
